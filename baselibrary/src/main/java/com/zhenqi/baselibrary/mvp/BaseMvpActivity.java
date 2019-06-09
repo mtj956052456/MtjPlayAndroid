@@ -1,4 +1,4 @@
-package com.zhenqi.loginmodule.mvp;
+package com.zhenqi.baselibrary.mvp;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,9 +10,9 @@ import com.zhenqi.baselibrary.base.BaseActivity;
  * @time 2019/6/8 2019 06
  * @des
  */
-public abstract class BaseMvpActivity extends BaseActivity {
+public abstract class BaseMvpActivity<P extends BasePresenter> extends BaseActivity  implements IBaseView{
 
-    protected BasePresenter mBasePresenter;
+    protected P mBasePresenter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -23,5 +23,14 @@ public abstract class BaseMvpActivity extends BaseActivity {
         }
     }
 
-    protected abstract BasePresenter createPresenter();
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if(mBasePresenter != null){
+            mBasePresenter.onDestroy();
+            mBasePresenter = null;
+        }
+    }
+
+    protected abstract P createPresenter();
 }

@@ -1,4 +1,4 @@
-package com.zhenqi.loginmodule.mvp;
+package com.zhenqi.baselibrary.mvp;
 
 import android.content.Context;
 
@@ -7,11 +7,11 @@ import android.content.Context;
  * @time 2019/6/8 2019 06
  * @des
  */
-public abstract class BasePresenter{
+public abstract class BasePresenter<V extends IBaseView, M extends BaseModel> implements BindViewModel<M> {
 
     private static final String TAG = "BasePresenter";
-    protected BaseModel mBaseModel;
-
+    protected M mBaseModel;
+    protected V mBaseView;
     protected Context mContext;
 
     public BasePresenter() {
@@ -19,16 +19,21 @@ public abstract class BasePresenter{
         mBaseModel.setBasePresenter(this);
     }
 
-    protected abstract BaseModel createModel();
+    public abstract M createModel();
+
+    public void setBaseView(V baseView) {
+        mBaseView = baseView;
+    }
 
     public void setContext(Context context) {
         mContext = context;
     }
 
-    public void onDestory() {
+    public void onDestroy() {
         if (mBaseModel != null) {
-            mBaseModel.onDestory();
+            mBaseModel.onDestroy();
             mBaseModel = null;
         }
+        mBaseView = null;
     }
 }

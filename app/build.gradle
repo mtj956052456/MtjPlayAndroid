@@ -32,12 +32,12 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-//    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
 
     implementation project(':baselibrary')//依赖公共库
-//    if (!Boolean.valueOf(rootProject.ext.isModule)) {
-//        runtimeOnly project(':loginmodule')//依赖登录库
+    if (!Boolean.valueOf(rootProject.ext.isModule)) {
+        implementation project(':loginmodule')//依赖登录库
 //        runtimeOnly project(':searchmodule')//搜索依赖库
 //        runtimeOnly project(':kotlinmodule')//kotion编程库
-//    }
+    }
 }

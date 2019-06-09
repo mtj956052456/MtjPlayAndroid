@@ -1,21 +1,21 @@
-package com.zhenqi.loginmodule.mvp;
+package com.zhenqi.baselibrary.mvp;
 
 /**
  * @author mtj
  * @time 2019/6/8 2019 06
  * @des
  */
-public class BaseModel {
+public class BaseModel<P extends BasePresenter> {
 
     private static final String TAG = "BaseModel";
 
-    protected BasePresenter mBasePresenter;
+    protected P mBasePresenter;
 
-    public BasePresenter getBasePresenter() {
+    public P getBasePresenter() {
         return mBasePresenter;
     }
 
-    public void setBasePresenter(BasePresenter basePresenter) {
+    public void setBasePresenter(P basePresenter) {
         mBasePresenter = basePresenter;
     }
 
@@ -23,7 +23,7 @@ public class BaseModel {
 
     }
 
-    public void onDestory() {
+    public void onDestroy() {
         mBasePresenter = null;
     }
 }

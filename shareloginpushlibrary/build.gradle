@@ -22,7 +22,7 @@ android {
 
         ndk { abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86", "arm64-v8a", "x86_64" }
         manifestPlaceholders = [
-                JPUSH_PKGNAME: applicationId,
+                JPUSH_PKGNAME: "com.zhenqi.pm2_5",
                 JPUSH_APPKEY : "65c19af61f1a907461d5e1b6", //JPush 上注册的包名对应的 Appkey.
                 JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
         ]

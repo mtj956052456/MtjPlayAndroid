@@ -1,17 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.zhenqi.loginmodule.LoginActivity">
+    android:padding="10dp"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:id="@+id/et_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="hqvip"
+        android:hint="请输入账号" />
+
+    <EditText
+        android:id="@+id/et_userpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="123456"
+        android:hint="请输入密码" />
+
+
+    <Button
+        android:id="@+id/bt_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="登录" />
 
     <TextView
-        android:id="@+id/tv_login"
+        android:id="@+id/tv_register"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="登录页"/>
+        android:padding="10dp"
+        android:text="点击注册"
+        android:textColor="@color/colorPrimaryDark" />
 
 </LinearLayout>

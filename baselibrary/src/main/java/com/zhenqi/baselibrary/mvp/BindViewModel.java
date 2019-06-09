@@ -1,4 +1,4 @@
-package com.zhenqi.loginmodule.mvp;
+package com.zhenqi.baselibrary.mvp;
 
 /**
  * @author mtj
@@ -7,6 +7,6 @@ package com.zhenqi.loginmodule.mvp;
  */
 public interface BindViewModel<M extends BaseModel> {
 
-    M creatModel();
+    M createModel();
 
 }
