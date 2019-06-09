@@ -1,0 +1,82 @@
+if (Boolean.valueOf(rootProject.ext.isModule)) {//单独调试
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+apply plugin: 'com.jakewharton.butterknife'
+
+android {
+    compileSdkVersion rootProject.ext.versions.compileSdkVersion
+
+    defaultConfig {
+        if (Boolean.valueOf(rootProject.ext.isModule)) {//单独调试 加applicationId
+            applicationId "com.zhenqi.pm2_5"
+        }
+
+        minSdkVersion rootProject.ext.versions.minSdkVersion
+        targetSdkVersion rootProject.ext.versions.targetSdkVersion
+        versionCode rootProject.ext.versions.versionCode
+        versionName rootProject.ext.versions.versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk { abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86", "arm64-v8a", "x86_64" }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "65c19af61f1a907461d5e1b6", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+        // 这是为了让ARouter知道这个模块区别于其他模块 不然报错
+//        javaCompileOptions {
+//            annotationProcessorOptions {
+//                arguments = [moduleName: project.getName()]
+//            }
+//        }
+    }
+
+    //java插件引入了一个概念叫做SourceSets，通过修改SourceSets中的属性，可以指定哪些源文件
+    //（ 或文件夹下的源文件 ） 要被编译 ， 哪些源文件要被排除 。
+    sourceSets {
+        main {
+            if (Boolean.valueOf(rootProject.ext.isModule)) {//单独调试 加载AndroidManifest
+                manifest.srcFile 'src/main/manifest/AndroidManifest.xml'
+            } else {//集成调试 加载AndroidManifest
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+//    annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
+
+    api 'com.umeng.sdk:push:4.2.0'
+    api 'com.umeng.sdk:analytics:7.5.3'
+    api 'com.umeng.sdk:debug:1.0.0'
+    api 'com.umeng.sdk:utdid:1.1.5.3'
+    api 'com.umeng.sdk:common:1.5.3'
+
+    api 'cn.jiguang.sdk:jpush:3.1.6'
+    api 'cn.jiguang.sdk:jcore:1.2.5'
+
+    api files('libs/umeng-share-core-6.9.3.jar')
+    api files('libs/umeng-share-QQ-simplify-6.9.3.jar')
+    api files('libs/umeng-share-sina-simplify-6.9.3.jar')
+    api files('libs/umeng-share-wechat-simplify-6.9.3.jar')
+    api files('libs/umeng-shareboard-widget-6.9.3.jar')
+    api files('libs/umeng-sharetool-6.9.3.jar')
+
+    implementation project(':baselibrary')//依赖公共库
+}

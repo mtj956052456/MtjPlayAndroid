@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="selected">#3388FB</color>
+    <color name="littleblack">#999999</color>
+    <color name="F3F4F6">#FFF3F4F6</color>
+
+    <color name="FF97">#FFF9F9F9</color>
+    <color name="news_selected">#0D00FF</color>
+    <color name="news_unselected">#999999</color>
+
+    <color name="photoinfo_menu">#999999</color>
+    <color name="divide_color">#FFF4F4F4</color>
+
+    <!-- A light Holo shade of blue -->
+    <color name="holo_blue_light">#ff33b5e5</color>
+    <!-- A light Holo shade of green -->
+    <color name="holo_green_light">#ff99cc00</color>
+    <!-- A light Holo shade of red -->
+    <color name="holo_red_light">#ffff4444</color>
+    <!-- A dark Holo shade of blue -->
+    <color name="holo_blue_dark">#ff0099cc</color>
+    <!-- A dark Holo shade of green -->
+    <color name="holo_green_dark">#ff669900</color>
+    <!-- A dark Holo shade of red -->
+    <color name="holo_red_dark">#ffcc0000</color>
+    <!-- A Holo shade of purple -->
+    <color name="holo_purple">#ffaa66cc</color>
+    <!-- A light Holo shade of orange -->
+    <color name="holo_orange_light">#ffffbb33</color>
+    <!-- A dark Holo shade of orange -->
+    <color name="holo_orange_dark">#ffff8800</color>
+    <!-- A really bright Holo shade of blue -->
+    <color name="holo_blue_bright">#ff00ddff</color>
+
+
+
+
+
+    <!-- 上传图片添加的颜色 -->
+    <color name="none_color">#00000000</color>
+    <color name="plugin_camera_black">#000000</color>
+    <color name="albumback">#E1E0DE</color>
+
+
+    <color name="style_red">#ff4c41</color>
+    <color name="style_divider_color">#C9C7CD</color>
+
+    <color name="home_text_color">#5B636B</color>
+
+    <color name="tab_grey">#929292</color>
+    <color name="tab_blue">#3cbff8</color>
+    <color name="page_bg_color">#efeff7</color>
+    <color name="line_and_outline_grey">#d9d9d9</color>
+    <color name="personal_item_pressed_color">#ebebeb</color>
+    <color name="light_black">#141414</color>
+    <color name="black_33">#333333</color>
+    <color name="hint_color">#a6a6a6</color>
+    <color name="deep_blue">#2d8fba</color>
+
+
+    <color name="white">#ffffff</color><!--白色 -->
+    <color name="red">#ff0000</color><!--红色 -->
+    <color name="gray">#808080</color><!--灰色 -->
+    <color name="blue">#0000ff</color><!--蓝色 -->
+    <color name="black">#000000</color><!--黑色 -->
+    <color name="transparent">#0000</color><!-- 透明 -->
+    <color name="window_bg">#7f000000</color><!-- 透明 -->
+
+    <color name="checked">#fefefe</color>
+    <color name="check_default">#575656</color>
+    <color name="check_storke">#8f8f8f</color>
+    <color name="check_soild">#f0f0f0</color>
+
+    <color name="colorPrimary">#4E93FF</color>
+    <color name="colorPrimaryDark">#4E93FF</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="valueIllegal">#999999</color>
+    <color name="excellent">#43ce17</color>
+    <color name="good">#efdc31</color>
+    <color name="mild">#ffaa00</color>
+    <color name="moderate">#ff401a</color>
+    <color name="heavy">#d20040</color>
+    <color name="severe">#9c0a4e</color>
+
+    <color name="grey_valueIllegal">#4D4D4D</color>
+    <color name="grey_excellent">#21680C</color>
+    <color name="grey_good">#786D1B</color>
+    <color name="grey_mild">#7F5500</color>
+    <color name="grey_moderate">#81200D</color>
+    <color name="grey_heavy">#6B001F</color>
+    <color name="grey_severe">#4D0628</color>
+    <color name="grey_blue">#284B81</color>
+
+
+    <color name="font_black">#1E1E1E</color>
+    <color name="font_gary">#646464</color>
+
+    <color name="line">#E8E8E8</color>
+    <color name="zzbackground">#D8D8D8</color>
+
+    <!--表格标题-->
+    <color name="form_title">#000000</color>
+    <!--表格正文-->
+    <color name="form_text">#646464</color>
+
+    <color name="text_color">#A5A5A5</color>
+
+    <!--switch开关-->
+    <color name="switch_gary">#DFDFDF</color>
+    <color name="switch_blue">#25B2D9</color>
+
+
+    <color name="stateColorRed">#FFFF5C4E</color>
+    <color name="stateColorGary">#999999</color>
+
+
+    <color name="change_table">#40A0FE</color>
+    <!--切换标签字体颜色-->
+    <color name="color_table">#B0B0B0</color>
+    <!--表格内容背景色-->
+    <color name="color_table_bg">#F4F6F8</color>
+    <!--表格内容颜色-->
+    <color name="color_table_text">#5B636B</color>
+
+    <color name="FF848484">#FF848484</color>
+
+    <color name="color_C6E3F5">#FFC6E3F5</color>
+    <color name="color_FFF5EE">#FFFFF5EE</color>
+    <color name="color_CCCCCC">#FFCCCCCC</color>
+
+    <!--城市实况头部颜色自取色)-->
+    <color name="lev_err">#A0ABB2</color>
+    <color name="lev_a">#3EDA37</color>
+    <color name="lev_b">#E9D824</color>
+    <color name="lev_c">#F2B706</color>
+    <color name="lev_d">#F37541</color>
+    <color name="lev_e">#EC5684</color>
+    <color name="lev_f">#D34AB3</color>
+
+
+    <color name="color_EFEFEF">#FFEFEFEF</color>
+
+</resources>

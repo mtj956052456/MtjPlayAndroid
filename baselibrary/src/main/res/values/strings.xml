@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BaseUtil</string>
+
+    <string name="left_date_two"><![CDATA[<<]]></string>
+    <string name="right_date_two"><![CDATA[>>]]></string>
+    <string name="left_date_one"><![CDATA[<]]></string>
+    <string name="right_date_one"><![CDATA[>]]></string>
+
+</resources>

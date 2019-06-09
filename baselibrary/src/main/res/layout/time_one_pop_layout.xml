@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/pop_layout"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/white">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#F9F9F9">
+
+        <TextView
+            android:id="@+id/memo_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:text="取消"
+            android:textColor="#1E1E1E"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/memo_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="确定"
+            android:textColor="#4E93FF"
+            android:textSize="18sp"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+
+        <com.weigan.loopview.LoopView
+            android:id="@+id/memo_year_one_loopView"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"/>
+
+
+        <com.weigan.loopview.LoopView
+            android:id="@+id/memo_month_one_loopView"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"/>
+
+
+        <com.weigan.loopview.LoopView
+            android:id="@+id/memo_day_one_loopView"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+</FrameLayout>
+
+

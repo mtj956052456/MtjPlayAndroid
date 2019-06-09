@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleImageView">  
+        <attr name="border_width" format="dimension" />  
+        <attr name="border_color" format="color" />  
+        <attr name="border_overlay" format="boolean" />  
+    </declare-styleable>
+    <declare-styleable name="FFFCalender">
+        <attr name="weekSize" format="dimension"/>
+        <attr name="weekColor" format="color"/>
+        <attr name="weekBarHeight" format="dimension"/>
+        <attr name="weekBarColor" format="color"/>
+        <attr name="dayColor" format="color"/>
+        <attr name="daySize" format="dimension"/>
+        <attr name="memoColor" format="color"/>
+        <attr name="memoSize" format="dimension"/>
+    </declare-styleable>
+</resources>

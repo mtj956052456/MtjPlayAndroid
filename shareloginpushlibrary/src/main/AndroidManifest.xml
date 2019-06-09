@@ -1,0 +1,5 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zhenqi.pm2_5" >
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+</manifest>
