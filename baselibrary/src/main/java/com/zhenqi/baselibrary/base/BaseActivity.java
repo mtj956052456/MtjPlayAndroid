@@ -22,9 +22,9 @@ import android.widget.EditText;
 
 import com.blankj.utilcode.util.AppUtils;
 import com.zhenqi.baselibrary.R;
-import com.zhenqi.baselibrary.net.API;
-import com.zhenqi.baselibrary.net.OkHttpCallBack;
-import com.zhenqi.baselibrary.net.OkHttpManager;
+import com.zhenqi.baselibrary.zq_net.API;
+import com.zhenqi.baselibrary.zq_net.OkHttpCallBack;
+import com.zhenqi.baselibrary.zq_net.OkHttpManager;
 import com.zhenqi.baselibrary.util.Base64;
 import com.zhenqi.baselibrary.util.Lg;
 import com.zhenqi.baselibrary.util.PermissionUtil;

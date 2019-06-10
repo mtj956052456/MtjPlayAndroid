@@ -1,4 +1,4 @@
-package com.zhenqi.baselibrary.net;
+package com.zhenqi.baselibrary.zq_net;
 
 /**
  * Created by C4B on 2017/9/3.

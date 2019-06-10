@@ -12,6 +12,10 @@ public class ActivityHolder {
         activityArray.add((Activity) context);
     }
 
+    public static boolean containsActivity(Context context) {
+        return activityArray.contains((Activity) context);
+    }
+
     public static void removeActivity(Context context) {
         activityArray.remove((Activity) context);
     }

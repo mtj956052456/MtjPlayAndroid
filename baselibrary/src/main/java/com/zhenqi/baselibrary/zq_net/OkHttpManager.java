@@ -1,4 +1,4 @@
-package com.zhenqi.baselibrary.net;
+package com.zhenqi.baselibrary.zq_net;
 
 import android.app.Activity;
 import android.content.Context;
@@ -6,8 +6,8 @@ import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.util.Base64;
 
-import com.zhenqi.baselibrary.net.encrypt.EncryptionUtil;
-import com.zhenqi.baselibrary.net.encrypt.Md5Util;
+import com.zhenqi.baselibrary.zq_net.encrypt.EncryptionUtil;
+import com.zhenqi.baselibrary.zq_net.encrypt.Md5Util;
 
 import org.json.JSONArray;
 import org.json.JSONException;

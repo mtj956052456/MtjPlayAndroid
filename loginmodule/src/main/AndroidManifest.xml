@@ -1,8 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.zhenqi.loginmodule" >
-    <!--集成调试使用-->
+    package="com.zhenqi.loginmodule">
+
     <application android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity"/>
-        <!--<activity android:name=".RegisterActivity"/>-->
+        <activity android:name=".register.RegisterActivity"/>
+        <activity android:name=".login.LoginActivity" />
     </application>
+
 </manifest>

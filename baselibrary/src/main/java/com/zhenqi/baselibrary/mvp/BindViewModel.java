@@ -9,4 +9,8 @@ public interface BindViewModel<M extends BaseModel> {
 
     M createModel();
 
+//    void onSuccess();
+//
+//    void onError(String errMsg);
+
 }

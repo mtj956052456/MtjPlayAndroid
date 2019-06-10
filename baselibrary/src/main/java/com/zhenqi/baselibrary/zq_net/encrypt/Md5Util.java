@@ -1,4 +1,4 @@
-package com.zhenqi.baselibrary.net.encrypt;
+package com.zhenqi.baselibrary.zq_net.encrypt;
 
 import android.text.TextUtils;
 

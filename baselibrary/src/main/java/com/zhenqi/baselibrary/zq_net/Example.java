@@ -1,4 +1,4 @@
-package com.zhenqi.baselibrary.net;
+package com.zhenqi.baselibrary.zq_net;
 
 import android.content.Context;
 import android.util.Log;

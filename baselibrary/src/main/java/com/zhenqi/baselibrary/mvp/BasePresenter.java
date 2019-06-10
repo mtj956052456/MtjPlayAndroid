@@ -36,4 +36,5 @@ public abstract class BasePresenter<V extends IBaseView, M extends BaseModel> im
         }
         mBaseView = null;
     }
+
 }

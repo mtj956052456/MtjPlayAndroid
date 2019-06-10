@@ -25,13 +25,13 @@ import butterknife.OnClick;
 
 public class MainActivity extends BaseActivity {
 
-    @BindView(R.id.customtoolbar)
+    @BindView(R2.id.customtoolbar)
     CustomToolbar mCustomToolbar;
-    @BindView(R.id.iv_head)
+    @BindView(R2.id.iv_head)
     ImageView mIvHead;
-    @BindView(R.id.share_img)
+    @BindView(R2.id.share_img)
     ImageView mShareImg;
-    @BindView(R.id.et_share_content)
+    @BindView(R2.id.et_share_content)
     EditText mEtShareContent;
 
     @Override
@@ -46,18 +46,15 @@ public class MainActivity extends BaseActivity {
         mEtShareContent.setText("http://www.baidu.com");
     }
 
-    @OnClick({R.id.share_img, R.id.btn_wx_login, R.id.btn_share})
+    @OnClick({R2.id.share_img, R2.id.btn_wx_login, R2.id.btn_share})
     public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.btn_wx_login:
-                ShareLoginUtil.WXLogin(this, mIvHead);
-                break;
-            case R.id.btn_share:
-                shareImg();
-                break;
-            case R.id.share_img:
-                chooseImg();
-                break;
+        int i = view.getId();
+        if (i == R.id.btn_wx_login) {
+            ShareLoginUtil.WXLogin(this, mIvHead);
+        } else if (i == R.id.btn_share) {
+            shareImg();
+        } else if (i == R.id.share_img) {
+            chooseImg();
         }
     }
 
