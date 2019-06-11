@@ -1,0 +1,55 @@
+if (Boolean.valueOf(rootProject.ext.isModule)) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+//apply plugin: 'kotlin-kapt'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+
+    defaultConfig {
+        compileSdkVersion rootProject.ext.versions.compileSdkVersion
+        if (Boolean.valueOf(rootProject.ext.isModule)) {//单独调试 加applicationId
+            applicationId "com.mtj.kotlinbase"
+        }
+
+        minSdkVersion rootProject.ext.versions.minSdkVersion
+        targetSdkVersion rootProject.ext.versions.targetSdkVersion
+        versionCode rootProject.ext.versions.versionCode
+        versionName rootProject.ext.versions.versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            if (Boolean.valueOf(rootProject.ext.isModule)) {//单独调试 加载AndroidManifest
+                manifest.srcFile 'src/main/manifest/AndroidManifest.xml'
+            } else {//集成调试 加载AndroidManifest
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+            }
+        }
+    }
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // arouter配置 kapt取代 annotationProcessor
+    //kapt rootProject.ext.dependencies["arouter-compiler"]
+
+    implementation project(':baselibrary')//依赖公共库
+//    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+}

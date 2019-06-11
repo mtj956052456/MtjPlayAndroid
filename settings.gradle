@@ -1,1 +1,1 @@
-include ':app', ':loginmodule', ':baselibrary', ':shareloginpushlibrary'
+include ':app', ':loginmodule', ':baselibrary', ':shareloginpushlibrary', ':kotlinbase'
