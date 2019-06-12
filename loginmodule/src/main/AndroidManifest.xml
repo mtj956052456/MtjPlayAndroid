@@ -3,7 +3,7 @@
     package="com.zhenqi.loginmodule">
 
     <application android:theme="@style/AppTheme">
-        <activity android:name=".register.RegisterActivity"/>
+        <activity android:name=".register.RegisterActivity" />
         <activity android:name=".login.LoginActivity" />
 
     </application>

@@ -9,10 +9,6 @@ import android.widget.TextView;
 
 import com.zhenqi.baselibrary.base.BaseActivity;
 import com.zhenqi.baselibrary.mvp.BaseMvpActivity;
-import com.zhenqi.baselibrary.util.SPUtil;
-import com.zhenqi.baselibrary.util.TextUtil;
-import com.zhenqi.baselibrary.view.DialogUtil;
-import com.zhenqi.loginmodule.login.LoginActivity;
 import com.zhenqi.mtjdemo.R;
 
 import butterknife.BindView;

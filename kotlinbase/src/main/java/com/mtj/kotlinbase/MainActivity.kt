@@ -19,12 +19,12 @@ class MainActivity : AppCompatActivity() {
         else
             tv_info.setText("未选中")
         login()
-        tv_info.setOnClickListener { ToastUtils.showShort("哈哈哈") }
+        //tv_info.setOnClickListener {object }
     }
 
 
     private fun login() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        //TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
         ToastUtils.showShort("去登陆")
     }
 

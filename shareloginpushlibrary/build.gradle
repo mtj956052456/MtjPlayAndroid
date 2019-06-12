@@ -17,7 +17,7 @@ android {
         targetSdkVersion rootProject.ext.versions.targetSdkVersion
         versionCode rootProject.ext.versions.versionCode
         versionName rootProject.ext.versions.versionName
-
+        multiDexEnabled true        //分包
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         ndk { abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86", "arm64-v8a", "x86_64" }

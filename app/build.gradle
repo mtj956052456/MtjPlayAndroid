@@ -36,7 +36,7 @@ dependencies {
 
     implementation project(':baselibrary')//依赖公共库
     if (!Boolean.valueOf(rootProject.ext.isModule)) {
-        implementation project(':loginmodule')//依赖登录库
+//        implementation project(':loginmodule')//依赖登录库
 //        runtimeOnly project(':searchmodule')//搜索依赖库
 //        runtimeOnly project(':kotlinmodule')//kotion编程库
     }

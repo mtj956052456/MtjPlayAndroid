@@ -2,6 +2,7 @@ package com.zhenqi.baselibrary.base;
 
 import android.app.Application;
 import android.content.Context;
+import android.support.multidex.MultiDex;
 
 import com.blankj.utilcode.util.Utils;
 
@@ -24,5 +25,11 @@ public class BaseApp extends Application {
 
     public static Context getApp() {
         return context;
+    }
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
     }
 }
