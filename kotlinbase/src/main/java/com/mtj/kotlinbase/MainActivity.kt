@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun login() {
-        //TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
         ToastUtils.showShort("去登陆")
     }
 
