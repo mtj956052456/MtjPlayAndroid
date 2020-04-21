@@ -1,18 +1,18 @@
-if (Boolean.valueOf(rootProject.ext.isModule)) {
+if (Boolean.valueOf(rootProject.ext.isModule)) {//单独调试
     apply plugin: 'com.android.application'
 } else {
     apply plugin: 'com.android.library'
 }
-
+apply plugin: 'com.jakewharton.butterknife'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
+    compileSdkVersion rootProject.ext.versions.compileSdkVersion
 
     defaultConfig {
-        compileSdkVersion rootProject.ext.versions.compileSdkVersion
         if (Boolean.valueOf(rootProject.ext.isModule)) {//单独调试 加applicationId
-            applicationId "com.mtj.kotlinbase"
+            applicationId "com.mtj.aidl"
         }
 
         minSdkVersion rootProject.ext.versions.minSdkVersion
@@ -21,15 +21,17 @@ android {
         versionName rootProject.ext.versions.versionName
         multiDexEnabled true        //分包
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-    }
 
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        // 这是为了让ARouter知道这个模块区别于其他模块 不然报错
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
         }
     }
 
+    //java插件引入了一个概念叫做SourceSets，通过修改SourceSets中的属性，可以指定哪些源文件
+    //（ 或文件夹下的源文件 ） 要被编译 ， 哪些源文件要被排除 。
     sourceSets {
         main {
             if (Boolean.valueOf(rootProject.ext.isModule)) {//单独调试 加载AndroidManifest
@@ -39,12 +41,22 @@ android {
             }
         }
     }
-}
 
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation project(':baselibrary')//依赖公共库
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+//    annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
+
+    implementation project(':baselibrary')//依赖公共库
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }

@@ -5,13 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/tv_info"
-        android:text="我是KotLin"
-        android:textSize="20sp"
-        android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:text="我是KotLin"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_stop"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="停止"
+        android:textSize="20sp" />
 </LinearLayout>
